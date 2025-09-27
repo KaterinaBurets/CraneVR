@@ -16,10 +16,10 @@ public class CraneEastWestMovingHandler : MonoBehaviour
     }
     private void OnEastButtonPressed(Hand hand)
     {
-        transform.position += Vector3.right * _eastSpeed * Time.deltaTime;
+        transform.position += Vector3.left * _eastSpeed * Time.deltaTime;
     }
     private void OnWestButtonPressed(Hand hand)
     {
-        transform.position += Vector3.left * _westSpeed * Time.deltaTime;
+        transform.position += Vector3.right * _westSpeed * Time.deltaTime;
     }
 }

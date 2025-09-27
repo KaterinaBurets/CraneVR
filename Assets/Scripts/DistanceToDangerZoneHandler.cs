@@ -4,7 +4,7 @@ using UnityEngine;
 public class DistanceToDangerZoneHandler : MonoBehaviour
 {
     [SerializeField] private OnOffButtonHandler _onOffButtonHandler;
-    [SerializeField] Transform _gazAnalyzer;
+    [SerializeField] Transform _zond;
     [SerializeField] Transform _dangerZone;
     [SerializeField] TextMeshPro _countText;
 
@@ -12,7 +12,7 @@ public class DistanceToDangerZoneHandler : MonoBehaviour
     {
         if (_onOffButtonHandler.IsDisplayOn == true)
         {
-            float distance = Vector3.Distance(_gazAnalyzer.position, _dangerZone.position);
+            float distance = Vector3.Distance(_zond.position, _dangerZone.position);
             _countText.text = distance.ToString();
         }
         
